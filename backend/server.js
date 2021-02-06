@@ -6,7 +6,9 @@ const cors = require('cors')
 const myRoutes = require('./routes/routes')
 
 dotEnv.config()
-mongoose.connect(process.env.DATABASE_CONNECT, () => {console.log('DB connected')})
+mongoose.connect(process.env.DATABASE_CONNECT,
+    {useNewUrlParser: true, useUnifiedTopology: true}, 
+    () => {console.log('DB connected')})
 app.use(express.json())
 app.use(cors())
 app.use('/site', myRoutes)

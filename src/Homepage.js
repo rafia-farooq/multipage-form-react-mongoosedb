@@ -10,6 +10,7 @@ import About from "./About";
 import App from "./App";
 import FormHooks from "./FormHooks";
 import FormClass from "./FormClass";
+import Users from "./Users";
 
 
 export default function Homepage(){
@@ -23,6 +24,10 @@ export default function Homepage(){
 
                 <Button style={{marginRight: "30px"}}>
                     <Link to={'/about'}>About</Link>
+                </Button>
+
+                <Button style={{marginRight: "30px"}}>
+                    <Link to={'/getStudents'}>Members</Link>
                 </Button>
 
                 <Button style={{marginRight: "30px"}}>
@@ -40,6 +45,9 @@ export default function Homepage(){
                 </Route>
                 <Route path={'/about'}>
                     <About />
+                </Route>
+                <Route path={'/getStudents'}>
+                    <Users />
                 </Route>
                 <Route path={'/register'}>
                     <FormHooks />
